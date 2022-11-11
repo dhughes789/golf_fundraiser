@@ -1,8 +1,10 @@
 const express = require('express');
+const apiRouter = require('./api');
 
 const router = express.Router();
+router.use('/api', apiRouter);
 
-//https://localhost/8080/hello/world
+//http://localhost:8080/hello/world
 router.get('/hello/world', function(req, res) {
     res.cookie('XSRF-TOKEN', req.csrfToken());
     res.send('Hello World!');
