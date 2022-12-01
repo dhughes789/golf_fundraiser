@@ -36,13 +36,18 @@ module.exports = (sequelize, DataTypes) => {
         len: [60, 60]
       },
   },
-  // TODO: custom validator for numeric 10 digit phone number. Maybe regex?
     phone: {
       type: DataTypes.STRING,
       allowNull: true,
       unique: true,
       validate: {
-        len: [0, 10]
+        len: [10, 13],
+        isPhone(value) {
+          const phoneValidator = /^\(?\d{3}?[\)-\s\.]?\d{3}[-\s\.]?\d{4}$/
+          if (!phoneValidator.test(value)) {
+            throw new Error('Must be a valid phone number.')
+          }
+        }
       },
     },
     admin: {
