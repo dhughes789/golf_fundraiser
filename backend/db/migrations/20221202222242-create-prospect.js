@@ -9,24 +9,33 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       username: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING(30),
+        allowNull: false,
+        unique: true,
       },
       email: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING(75),
+        allowNull: true,
+        unique: true,
       },
       phone: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING(10),
+        allowNull: true,
+        unique: true,
       },
       shirt_size: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING(5),
+        allowNull: true,
       },
       createdAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
+        defaultValue: Sequelize.fn('now'),
       },
       updatedAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
+        defaultValue: Sequelize.fn('now'),
       }
     });
   },
