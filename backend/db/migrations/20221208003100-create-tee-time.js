@@ -17,7 +17,7 @@ module.exports = {
         allowNull: false
       },
       date: {
-        type: Sequelize.DATE,
+        type: Sequelize.STRING(20),
         allowNull: false
       },
       capacity: {
