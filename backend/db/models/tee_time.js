@@ -28,7 +28,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   }, {});
   Tee_time.associate = function(models) {
-    // associations can be defined here
+    Tee_time.hasMany(models.Standing, {foreignKey: 'tee_time_id'})
   };
   return Tee_time;
 };
