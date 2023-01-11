@@ -18,12 +18,15 @@ module.exports = {
         }
       },
       flight: {
+        allowNull: true,
         type: Sequelize.STRING(5)
       },
       position: {
+        allowNull: true,
         type: Sequelize.INTEGER
       },
       prize: {
+        allowNull: true,
         type: Sequelize.STRING(250)
       },
       createdAt: {
