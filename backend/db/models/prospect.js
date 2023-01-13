@@ -53,7 +53,7 @@ module.exports = (sequelize, DataTypes) => {
   
   }, {});
   Prospect.associate = function(models) {
-    // associations can be defined here
+    Prospect.hasMany(models.Teammate, {foreignKey: 'prospect_id'})
   };
   return Prospect;
 };
