@@ -5,11 +5,17 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: true,
       unique: true,
+      validate: {
+        len: [3, 75]
+      }
     },
     phone: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       allowNull: true,
-      unique: true
+      unique: true,
+      validate: {
+        len: [10, 13]
+      }
     }
   }, {});
   Unsubscribe.associate = function(models) {
