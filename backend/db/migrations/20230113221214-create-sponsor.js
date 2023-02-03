@@ -9,19 +9,24 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       imageUrl: {
-        type: Sequelize.STRING
+        allowNull: true,
+        type: Sequelize.STRING(250)
       },
       year: {
-        type: Sequelize.INTEGER
+        allowNull: false,
+        type: Sequelize.STRING(4)
       },
       name: {
-        type: Sequelize.STRING
+        allowNull: false,
+        type: Sequelize.STRING(50)
       },
       phone: {
-        type: Sequelize.String(13)
+        allowNull: true,
+        type: Sequelize.STRING(13)
       },
       email: {
-        type: Sequelize.STRING
+        allowNull: false,
+        type: Sequelize.STRING(75)
       },
       createdAt: {
         allowNull: false,

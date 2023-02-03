@@ -9,13 +9,16 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       imageUrl: {
-        type: Sequelize.STRING
+        allowNull: true,
+        type: Sequelize.STRING(250)
       },
       description: {
-        type: Sequelize.STRING
+        allowNull: true,
+        type: Sequelize.STRING(250)
       },
       donor: {
-        type: Sequelize.STRING
+        allowNull: true,
+        type: Sequelize.STRING(250)
       },
       createdAt: {
         allowNull: false,
