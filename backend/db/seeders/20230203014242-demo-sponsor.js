@@ -7,14 +7,14 @@ module.exports = {
         imageUrl: 'https://ibb.co/zPfvxFc',
         year: '2023',
         name: 'Jessie Schrimpf',
-        phone: faker.phone.phoneNumber('573-###-###'),
+        phone: faker.phone.number('573-###-###'),
         email: 'demo@admin.io'
       },
       {
         imageUrl: 'https://ibb.co/YXsJ9KR',
         year: '2023',
         name: 'Rodrick Smith',
-        phone: faker.phone.phoneNumber('573-###-###'),
+        phone: faker.phone.number('573-###-###'),
         email: 'demo@admin.io'
       }
     ], {});
