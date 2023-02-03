@@ -1,5 +1,5 @@
 'use strict';
-const faker = require('faker');
+import { faker } from '@faker-js/faker'
 const bcrypt = require('bcryptjs');
 
 module.exports = {

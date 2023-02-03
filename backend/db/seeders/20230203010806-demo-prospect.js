@@ -1,4 +1,5 @@
 'use strict';
+import { faker } from '@faker-js/faker'
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
