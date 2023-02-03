@@ -23,7 +23,7 @@ module.exports = {
         allowNull: false,
       },
       phone: {
-        type: Sequelize.STRING(10),
+        type: Sequelize.STRING(13),
         allowNull: true,
         unique: true,
       },
