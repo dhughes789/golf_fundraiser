@@ -62,7 +62,24 @@ module.exports = (sequelize, DataTypes) => {
         len: [1, 5]
       },
     }
-  }, {});
+  }, 
+  {
+    defaultScope: {
+      attributes: {
+        exclude: ['hashedPassword', 'email', 'phone', 'createdAt', 'updatedAt'],
+      },
+    }, 
+    scopes: {
+      currentUser: {
+        attributes:{
+          exclude: ['hashedPassword']
+        },
+      },
+      loginUser: {
+        attributes:{}
+      }
+    }
+  });
   User.associate = function(models) {
     User.hasMany(models.Teammate, {foreignKey: 'user_id'})
   };
