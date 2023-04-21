@@ -54,7 +54,7 @@ module.exports = {
         },
         {
           team_id: 2,
-          prospect_id: 13,
+          prospect_id: 1,
           user_id: null,
           captain: false,
           paid: true,
@@ -82,7 +82,7 @@ module.exports = {
         },
         {
           team_id: 3,
-          prospect_id: 14,
+          prospect_id: 2,
           user_id: null,
           captain: false,
           paid: true,
@@ -110,7 +110,7 @@ module.exports = {
         },
         {
           team_id: 4,
-          prospect_id: 15,
+          prospect_id: 3,
           user_id: null,
           captain: false,
           paid: true,
@@ -138,7 +138,7 @@ module.exports = {
         },
         {
           team_id: 5,
-          prospect_id: 16,
+          prospect_id: 4,
           user_id: null,
           captain: false,
           paid: true,
@@ -159,14 +159,14 @@ module.exports = {
         },
         {
           team_id: 6,
-          prospect_id: 17,
+          prospect_id: 5,
           user_id: null,
           captain: false,
           paid: true,
         },
         {
           team_id: 6,
-          prospect_id: 18,
+          prospect_id: 6,
           user_id: null,
           captain: false,
           paid: true,
@@ -187,14 +187,14 @@ module.exports = {
         },
         {
           team_id: 7,
-          prospect_id: 19,
+          prospect_id: 7,
           user_id: null,
           captain: false,
           paid: true,
         },
         {
           team_id: 7,
-          prospect_id: 20,
+          prospect_id: 8,
           user_id: null,
           captain: false,
           paid: true,
@@ -208,21 +208,21 @@ module.exports = {
         },
         {
           team_id: 8,
-          prospect_id: 21,
+          prospect_id: 9,
           user_id: null,
           captain: false,
           paid: true,
         },
         {
           team_id: 8,
-          prospect_id: 22,
+          prospect_id: 10,
           user_id: null,
           captain: false,
           paid: true,
         },
         {
           team_id: 8,
-          prospect_id: 23,
+          prospect_id: 11,
           user_id: null,
           captain: false,
           paid: true,
@@ -250,7 +250,7 @@ module.exports = {
         },
         {
           team_id: 9,
-          prospect_id: 24,
+          prospect_id: 12,
           user_id: null,
           captain: false,
           paid: true,
