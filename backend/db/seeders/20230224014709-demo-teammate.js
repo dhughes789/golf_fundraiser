@@ -244,7 +244,7 @@ module.exports = {
         {
           team_id: 9,
           prospect_id: null,
-          user_id: 26,
+          user_id: 8,
           captain: false,
           paid: true,
         },
