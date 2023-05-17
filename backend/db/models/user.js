@@ -41,9 +41,11 @@ module.exports = (sequelize, DataTypes) => {
       validate: {
         len: [10, 13],
         isPhone(value) {
-          const phoneValidator = /^\(?\d{3}?[\)-\s\.]?\d{3}[-\s\.]?\d{4}$/
-          if (!phoneValidator.test(value)) {
-            throw new Error('Must be a valid phone number.')
+          if (value !== null) {
+            const phoneValidator = /^\(?\d{3}?[\)-\s\.]?\d{3}[-\s\.]?\d{4}$/
+            if (!phoneValidator.test(value)) {
+              throw new Error('Must be a valid phone number.')
+            }
           }
         }
       },
