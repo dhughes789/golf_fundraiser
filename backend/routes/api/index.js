@@ -5,10 +5,6 @@ const { restoreUser, requireAuth, setTokenCookie } = require('../../utils/auth.j
 const sessionRouter = require('./session.js');
 const usersRouter = require('./users.js');
 
-// router.post('/test', function(req, res) {
-//     res.json({ requestBody: req.body });
-// });
-
 // // GET /api/set-token-cookie
 // router.get('/set-token-cookie', asyncHandler(async (req, res) => {
 //   const user = await User.findOne({

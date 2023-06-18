@@ -1,18 +1,18 @@
 
 import React from 'react';
-
 import './index.css';
-
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import App from './App';
+import configureStore from './store'
+import { restoreCSRF, fetch } from './store/csrf';
 
-import configureStore from './store';
-import { restoreCSRF } from './store/csrf';
+console.log("Entered app!!!")
 const store = configureStore();
 
 if (process.env.NODE_ENV !== 'production'){
+  console.log('NOT Production')
   restoreCSRF();
   
   window.csrfFetch = fetch;
