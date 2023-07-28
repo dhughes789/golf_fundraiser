@@ -5,6 +5,7 @@ const SET_USER = 'session/setUser';
 const REMOVE_USER = 'session/removeUser';
 
 const setUser = (user) => {
+  console.log("in the setUser action")
   return {
     type: SET_USER,
     payload: user,
@@ -18,6 +19,7 @@ const removeUser = () => {
 };
 
 export const login = (user) => async (dispatch) => {
+  console.log("in the login function")
   const { credential, password } = user;
   const response = await fetch('/api/session', {
     method: 'POST',
