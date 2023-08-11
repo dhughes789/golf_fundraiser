@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import * as sessionActions from '../../store/session';
 import { useDispatch, useSelector } from 'react-redux';
 import { Redirect } from 'react-router-dom';
+import './LoginForm.css'
 
 function LoginFormPage() {
   const dispatch = useDispatch();
@@ -25,30 +26,40 @@ function LoginFormPage() {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <ul>
-        {errors.map((error, idx) => <li key={idx}>{error}</li>)}
-      </ul>
-      <label>
-        Username or Email
-        <input
-          type="text"
-          value={credential}
-          onChange={(e) => setCredential(e.target.value)}
-          required
-        />
-      </label>
-      <label>
-        Password
-        <input
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-        />
-      </label>
-      <button type="submit">Log In</button>
-    </form>
+    <div className='login-form-container'>
+      <form className='login-form' onSubmit={handleSubmit}>
+        <div className='login-form__row-one'></div>
+        <div className='login-form__row-two'>
+          <input
+            className='login-form__input'
+            type="text"
+            value={credential}
+            onChange={(e) => setCredential(e.target.value)}
+            placeholder='username or email'
+            required
+          />
+          <input
+            className='login-form__input'
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            placeholder='password'
+            required
+          />
+        </div>
+        <div className='login-form__row-three'>
+          <div className='login-form__switch'>link goes here</div>
+          <button className='login-form__button' type="submit">login</button>
+        </div>
+        <div className='login-form__row-four'>
+          <div className='login-form__errors'>
+            <ul>
+            {errors.map((error, idx) => <li key={idx}>{error}</li>)}
+            </ul>
+          </div>
+        </div>
+      </form>
+    </div>
   );
 }
 

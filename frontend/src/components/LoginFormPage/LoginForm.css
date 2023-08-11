@@ -1,0 +1,31 @@
+.login-form-container {
+    border: 2px dashed red;
+    display: flex;
+    justify-content: center;
+    height: 600px;
+}
+
+.login-form {
+    border: 3px solid black;
+    /* display: flex; */
+}
+
+.login-form__row-one {
+    border: 2px dashed green;
+    height: 15%;
+}
+
+.login-form__row-two {
+    border: 2px dashed orange;
+    height: 15%;
+}
+
+.login-form__row-three {
+    border: 2px dashed blue;
+    height: 15%;
+}
+
+.login-form__row-four {
+    border: 2px dashed blueviolet;
+    height: 15%;
+}
