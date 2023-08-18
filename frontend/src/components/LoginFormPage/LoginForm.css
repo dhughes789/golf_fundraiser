@@ -3,29 +3,56 @@
     display: flex;
     justify-content: center;
     height: 600px;
+    width: 500px;
 }
 
 .login-form {
     border: 3px solid black;
-    /* display: flex; */
+    height: 550px;
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
 }
 
 .login-form__row-one {
-    border: 2px dashed green;
-    height: 15%;
+    border: 2px  green;
+
+}
+
+.login-form__title {
+    font-size: 25px;
+    margin-left: 20px;
+}
+
+.login-form__input {
+    height: 45px;
+    margin-top: 2.5rem;
 }
 
 .login-form__row-two {
-    border: 2px dashed orange;
-    height: 15%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .login-form__row-three {
-    border: 2px dashed blue;
-    height: 15%;
+    display: flex;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 2.5rem;
+}
+
+.login-form__button {
+    width: 100%;
+    height: 45px;
 }
 
 .login-form__row-four {
+    margin-top: 50px;
     border: 2px dashed blueviolet;
     height: 15%;
+    
 }
