@@ -68,8 +68,19 @@
     height: 45px;
     border-radius: 5px;
     border: none;
-    /* border-color: rgba(235, 255, 247, 0.461); */
+    margin-top: 10px;
+    background-color: rgba(235, 255, 247, 0.8);
+    transition:
+        background-color 1s;
+}
 
+.login-form__button:hover {
+    width: 99%;
+    height: 45px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 10px;
+    background-color: rgba(235, 255, 247, 1);
 }
 
 .login-form__row-four {
