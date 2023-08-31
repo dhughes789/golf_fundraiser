@@ -27,6 +27,7 @@ function LoginFormPage() {
 
   return (
     <div className='login-form-container'>
+      <img src={'/golfPic.jpg'} className='test-image'/>
       <form className='login-form' onSubmit={handleSubmit}>
         <div className='login-form__row-one'>
           <div className='login-form__title'>login</div>
@@ -37,7 +38,7 @@ function LoginFormPage() {
             type="text"
             value={credential}
             onChange={(e) => setCredential(e.target.value)}
-            placeholder='username or email'
+            placeholder='   username or email'
             required
           />
           <input
@@ -45,7 +46,7 @@ function LoginFormPage() {
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            placeholder='password'
+            placeholder='   password'
             required
           />
         </div>
