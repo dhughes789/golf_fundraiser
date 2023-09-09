@@ -46,6 +46,7 @@
     border: none;
     font-family: 'Montserrat Alternates', sans-serif;
     font-size: 15px;
+    padding-left: 30px;
 }
 
 .login-form__input::placeholder {
@@ -124,4 +125,5 @@ a {
 a:hover {
     color: #024b86;
     font-weight: 900;
+    text-decoration: underline;
 }

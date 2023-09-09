@@ -39,7 +39,7 @@ function LoginFormPage() {
             type="text"
             value={credential}
             onChange={(e) => setCredential(e.target.value)}
-            placeholder='   username or email'
+            placeholder='username or email'
             required
           />
           <input
@@ -47,7 +47,7 @@ function LoginFormPage() {
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            placeholder='   password'
+            placeholder='password'
             required
           />
         </div>
