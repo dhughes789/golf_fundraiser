@@ -8,7 +8,7 @@ function App() {
       <Route path="/login">
         <LoginFormPage />
       </Route>
-      <Route path="/gross">
+      <Route path="/signup">
         <div>Danton Pubes</div>
       </Route>
     </Switch>

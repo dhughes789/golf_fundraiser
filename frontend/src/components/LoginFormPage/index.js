@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import * as sessionActions from '../../store/session';
 import { useDispatch, useSelector } from 'react-redux';
 import { Redirect } from 'react-router-dom';
+// import { FaExclamationCircle, FaLock, FaUser } from "react-icons/fa";
 import './LoginForm.css'
 
 function LoginFormPage() {
@@ -9,7 +10,7 @@ function LoginFormPage() {
   const sessionUser = useSelector(state => state.session.user);
   const [credential, setCredential] = useState('');
   const [password, setPassword] = useState('');
-  const [errors, setErrors] = useState(['this is an error', 'this is an error too']);
+  const [error, setError] = useState('');
 
   if (sessionUser) return (
     <Redirect to="/" />
@@ -18,10 +19,10 @@ function LoginFormPage() {
   const handleSubmit = (e) => {
     console.log("in the handlesubmit")
     e.preventDefault();
-    setErrors([]);
+    setError();
     return dispatch(sessionActions.login({ credential, password }))
       .catch((res) => {
-        if (res.data && res.data.errors) setErrors(res.data.errors);
+        if (res.data && res.data.errors) setError(res.data.errors);
       });
   }
 
@@ -54,12 +55,11 @@ function LoginFormPage() {
           <button className='login-form__button' type="submit">login</button>
         </div>
         <div className='login-form__row-four'>
-          <div className='login-form__errors'>
-            <ul>
-            {errors.map((error, idx) => <li key={idx}>{error}</li>)}
-            </ul>
-          </div>
-          <div className='login-form__switch'>Need an account? <span>Sign up.</span></div>
+            {error}
+        </div>
+        <div className='login-form__row-five'>
+          <div className='login-form__switch'>need an account? <a href='https://www.google.com/'>signup</a></div>
+          <div className='login-form__forgot'>forgot password? <a href='https://www.google.com/'>reset</a></div>
         </div>
       </form>
     </div>

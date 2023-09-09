@@ -59,12 +59,20 @@
     padding-right: 30px;
 }
 
+
 .login-form__row-three {
     display: flex;
     justify-content: center;
     padding-left: 30px;
     padding-right: 30px;
     padding-top: 2.5rem;
+}
+
+.login-form__row-four {
+    margin-top: 5px;
+    color: rgb(173, 0, 0);
+    margin-left: 35px;
+    height: 15px;
 }
 
 .login-form__button {
@@ -85,8 +93,35 @@
     background-color: rgba(235, 255, 247, 1);
 }
 
-.login-form__row-four {
+.login-form__row-five {
+    display: flex;
+    justify-content: space-around;
     margin-top: 50px;
-    border: 2px dashed blueviolet;
     height: 15%;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 15px;
+}
+
+.login-form__switch {
+    align-self: flex-end;
+    color: #EBFFF7;
+}
+
+.login-form__forgot {
+    align-self: flex-end;
+    color: #EBFFF7;
+}
+
+a {
+    text-decoration: none;
+    color: #02223c;
+    font-weight: 600;
+    transition:
+        color 1s,
+        font-weight 1s;
+}
+
+a:hover {
+    color: #024b86;
+    font-weight: 900;
 }
