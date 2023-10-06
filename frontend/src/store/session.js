@@ -46,6 +46,12 @@ export const signup = (user) => async (dispatch) => {
   return response;
 };
 
+export const restoreUser = () => async dispatch => {
+  const res = await fetch('/api/session');
+  dispatch(setUser(res.data.user));
+  return res;
+};
+
 const initialState = { user: null };
 
 const sessionReducer = (state = initialState, action) => {
