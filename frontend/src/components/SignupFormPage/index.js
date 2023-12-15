@@ -11,35 +11,32 @@ function SignupFormPage(){
     const [shirtSize, setShirtSize] = useState('L');
     const [password, setPassword] = useState('');
     const [confirmpassword, setConfirmPassword] = useState('');
-    const [errors, setErrors] = useState('');
+    const [errors, setErrors] = useState([]);
 
-    const isDisabled = ()=>{
-        if(password == confirmpassword && password.length>7 && password.length<25){
-            console.log('work');
-            return false;
-            
-        }
-        else{
-            console.log('no worked');
-            return true;
-        }
-     }
-    
+
+
 
      const handleSubmit = (e) => {
         console.log("in the handlesubmitsingup" + username,email,phone,shirtSize, password)
         e.preventDefault();
-         setErrors();
-        return dispatch(sessionActions.signup({ username,email,phone,shirtSize, password }))
-          .catch((res) => {
-            if (res.data && res.data.errors) {
-                setErrors(res.data.errors);
-            }
-          });
+        if(password == confirmpassword){
+            setErrors([]);
+            return dispatch(sessionActions.signup({ username,email,phone,shirtSize, password }))
+              .catch((res) => {
+                if (res.data && res.data.errors) {
+                    setErrors(res.data.errors);
+                }
+              });
+        }
+        return setErrors(['Confirm Password field must be the same as the Password field']);
       }
 
     return (
-        <form className='signup-form' onSubmit={handleSubmit}>
+        <div>
+            <ul>
+                {errors.map((error, idx) => <li key={idx}>{error}</li>)}
+            </ul>
+      <form className='signup-form' onSubmit={handleSubmit}>
             <input
                 className='signup-form__input'
                 type="text"
@@ -87,7 +84,7 @@ function SignupFormPage(){
                 placeholder='confirm password'
                 required
             />
-            <button className='signup-form__input' type='submit' disabled={isDisabled()} >SUBMIT
+            <button className='signup-form__input' type='submit' >SUBMIT
 
             </button>
             <div className='login-form__row-four'>
@@ -95,6 +92,8 @@ function SignupFormPage(){
         </div>
 
         </form>
+        </div>
+       
     )
 }
 export default SignupFormPage;
