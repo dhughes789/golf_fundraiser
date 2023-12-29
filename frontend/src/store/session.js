@@ -33,13 +33,16 @@ export const login = (user) => async (dispatch) => {
 };
 
 export const signup = (user) => async (dispatch) => {
-  const { username, email, password } = user;
+  const { username, email, password,phone, admin, shirtSize } = user;
   const response = await fetch("/api/users", {
     method: "POST",
     body: JSON.stringify({
       username,
       email,
       password,
+      phone,
+      admin: false,
+      shirt_size: shirtSize,
     }),
   });
   dispatch(setUser(response.data.user));
@@ -69,5 +72,7 @@ const sessionReducer = (state = initialState, action) => {
       return state;
   }
 };
+
+
 
 export default sessionReducer;
