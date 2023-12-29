@@ -1,11 +1,11 @@
 // frontend/src/store/session.js
-import { fetch } from './csrf';
+import { fetch } from "./csrf";
 
-const SET_USER = 'session/setUser';
-const REMOVE_USER = 'session/removeUser';
+const SET_USER = "session/setUser";
+const REMOVE_USER = "session/removeUser";
 
 const setUser = (user) => {
-  console.log("in the setUser action")
+  console.log("in the setUser action");
   return {
     type: SET_USER,
     payload: user,
@@ -19,10 +19,10 @@ const removeUser = () => {
 };
 
 export const login = (user) => async (dispatch) => {
-  console.log("in the login function")
+  console.log("in the login function");
   const { credential, password } = user;
-  const response = await fetch('/api/session', {
-    method: 'POST',
+  const response = await fetch("/api/session", {
+    method: "POST",
     body: JSON.stringify({
       credential,
       password,
@@ -33,7 +33,7 @@ export const login = (user) => async (dispatch) => {
 };
 
 export const signup = (user) => async (dispatch) => {
-  const { username, email, password,phone, admin, shirtSize } = user;
+  const { username, email, password, phone, admin, shirtSize } = user;
   const response = await fetch("/api/users", {
     method: "POST",
     body: JSON.stringify({
@@ -49,10 +49,18 @@ export const signup = (user) => async (dispatch) => {
   return response;
 };
 
-export const restoreUser = () => async dispatch => {
-  const res = await fetch('/api/session');
+export const restoreUser = () => async (dispatch) => {
+  const res = await fetch("/api/session");
   dispatch(setUser(res.data.user));
   return res;
+};
+
+export const logout = () => async (dispatch) => {
+  const response = await fetch("/api/session", {
+    method: "DELETE",
+  });
+  dispatch(removeUser());
+  return response;
 };
 
 const initialState = { user: null };
@@ -72,7 +80,5 @@ const sessionReducer = (state = initialState, action) => {
       return state;
   }
 };
-
-
 
 export default sessionReducer;

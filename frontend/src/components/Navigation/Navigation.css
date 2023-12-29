@@ -1,0 +1,11 @@
+.navbar_container {
+  border: 1px solid red;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar_session {
+  border: 1px solid blue;
+  display: flex;
+  flex-direction: column;
+}
