@@ -4,8 +4,15 @@
   justify-content: space-between;
 }
 
+.navbar_home {
+  border: 1px solid blue;
+  display: flex;
+}
+
 .navbar_session {
   border: 1px solid blue;
   display: flex;
-  flex-direction: column;
 }
+
+/* drop down on right side so regardless of active or inactive 
+session user, you can drop down to see login/signup or user/logout */
