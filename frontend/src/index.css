@@ -1,1 +1,7 @@
 /* TODO Add site wide styles */
+.app_container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(176, 176, 176);
+}
