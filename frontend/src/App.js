@@ -18,6 +18,11 @@ function App() {
 
   return (
     <div className="app_container">
+      <img src={"/golfPic.jpg"} className="app__background_image" />
+      <img
+        src={"/app_background_accent.svg"}
+        className="app__background_accent"
+      />
       <Navigation isLoaded={isLoaded} />
       {isLoaded && (
         <Switch>

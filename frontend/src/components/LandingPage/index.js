@@ -5,8 +5,12 @@ import "./LandingPage.css";
 
 function LandingPage({ user }) {
   return (
-    <div className="landing_page_container">
-      <div> landing page placeholder</div>
+    <div className="landing_page__container">
+      <div className="landing_page__title_container">
+        <div className="landing_page__title">ALS</div>
+        <div className="landing_page__title">Charity</div>
+        <div className="landing_page__title">Golf Tournament</div>
+      </div>
     </div>
   );
 }
