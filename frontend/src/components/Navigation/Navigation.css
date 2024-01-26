@@ -2,6 +2,7 @@
   border: 1px solid red;
   display: flex;
   justify-content: space-between;
+  padding:10px 5px 5px 5px;
 }
 
 .navbar_home {
@@ -17,7 +18,7 @@
 /* drop down on right side so regardless of active or inactive 
 session user, you can drop down to see login/signup or user/logout */
 
-.container {
+.sandwich {
   display: inline-block;
   cursor: pointer;
 }
@@ -29,17 +30,17 @@ session user, you can drop down to see login/signup or user/logout */
   height: 5px;
   background-color: #333;
   margin: 6px 0;
-  transition: 0.4s;
+  transition: 0.9s;
 }
 
-.change .bar1 {
+.crossed .bar1 {
   transform: translate(0, 1px) rotate(-45deg);
 }
 
-.change .bar2 {
+.crossed .bar2 {
   opacity: 0;
 }
 
-.change .bar3 {
+.crossed .bar3 {
   transform: translate(0, -11px) rotate(45deg);
 }
