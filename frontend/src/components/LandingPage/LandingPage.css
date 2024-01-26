@@ -1,0 +1,16 @@
+.landing_page__container {
+  border: 1px dashed blue;
+}
+
+.landing_page__title_container {
+  margin-top: 7%;
+}
+
+.landing_page__title {
+  font-family: "Fanwood Text", serif;
+  font-size: 140px;
+  /* font-weight: 700; */
+  color: #02223c;
+  margin-left: 4rem;
+  margin-top: -20px;
+}
