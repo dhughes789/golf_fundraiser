@@ -2,23 +2,45 @@
   border: 1px solid red;
   margin-top: auto;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
 }
 
-.footer_column {
-  border: 1px dashed blueviolet;
+.footer_sponsor {
+  /* border: 1px dashed black; */
+  width: 45%;
+  display: flex;
+  margin-left: 6%;
 }
 
-.words {
+.footer_sponsor__title {
+  /* border: 1px dashed blue; */
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 25px;
+  margin-right: 10px;
+}
+
+.footer_sponsor__ticker {
+  overflow: hidden;
+  /* border: 1px dashed greenyellow; */
+  width: 100%;
+  font-family: "Montserrat Alternates", sans-serif;
+}
+
+.footer_sponsor__sponsors {
   position: relative;
-  animation: move-words 20s linear infinite;
+  white-space: nowrap;
+  animation: move-words 25s linear infinite;
   margin: 0;
+  font-size: 25px;
 }
 
 @keyframes move-words {
   0% {
-    left: 100%;
+    right: 200%;
   }
   100% {
-    left: -100%;
+    right: -100%;
   }
 }
