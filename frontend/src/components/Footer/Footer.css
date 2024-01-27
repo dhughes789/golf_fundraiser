@@ -1,5 +1,5 @@
 .footer_container {
-  border: 1px solid red;
+  background-color: #829298;
   margin-top: auto;
   display: flex;
   justify-content: space-between;
@@ -8,24 +8,23 @@
 }
 
 .footer_sponsor {
-  /* border: 1px dashed black; */
   width: 45%;
   display: flex;
-  margin-left: 6%;
+  margin-left: 6rem;
 }
 
 .footer_sponsor__title {
-  /* border: 1px dashed blue; */
   font-family: "Montserrat Alternates", sans-serif;
+  color: #02223c;
   font-size: 25px;
   margin-right: 10px;
 }
 
 .footer_sponsor__ticker {
   overflow: hidden;
-  /* border: 1px dashed greenyellow; */
   width: 100%;
   font-family: "Montserrat Alternates", sans-serif;
+  color: #02223c;
 }
 
 .footer_sponsor__sponsors {
@@ -38,9 +37,32 @@
 
 @keyframes move-words {
   0% {
-    right: 200%;
+    right: 250%;
   }
   100% {
     right: -100%;
   }
+}
+
+.footer_credit {
+  display: flex;
+  justify-content: space-between;
+  width: 110px;
+}
+
+.footer_credit__github {
+  display: flex;
+}
+
+.footer_credit__github img {
+  width: 35px;
+  height: auto;
+  align-self: center;
+}
+
+.footer_credit__char {
+  margin-top: 3px;
+  font-size: 33px;
+  font-weight: bold;
+  font-family: "Fanwood Text", serif;
 }

@@ -10,6 +10,9 @@ function Footer({ user }) {
     "Ghetto Gerbes",
     "Applebees",
     "Jamaican Jerk Hut",
+    "Helias Catholic",
+    "Central Bank",
+    "Capital Holdings",
   ];
 
   const renderSponsorList = (sponsors) => {
@@ -26,7 +29,13 @@ function Footer({ user }) {
           </div>
         </div>
       </div>
-      <div className="footer_credit">placeholder</div>
+      <div className="footer_credit">
+        <div className="footer_credit__github">
+          <img src={"/gitHubMark.png"} className="image"></img>
+        </div>
+        <div className="footer_credit__char">D</div>
+        <div className="footer_credit__char">Q</div>
+      </div>
     </div>
   );
 }
