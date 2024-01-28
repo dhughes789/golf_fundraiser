@@ -7,12 +7,27 @@ import './Navigation.css';
 function Navigation({ isLoaded }) {
   const sessionUser = useSelector((state) => state.session.user);
   const [sandwichClass, setSandwichClass] = useState('sandwich');
+  const [isDropdownVisible, setDropdownVisible] = useState(false);
+
+  const DropdownMenu = () => {
+    return (
+      <div className='dropdown-menu'>
+        <ul>
+          <li>Home</li>
+          <li>Login</li>
+          <li>Signup</li>
+        </ul>
+      </div>
+    );
+  };
 
   function myFunction() {
     if (sandwichClass == 'sandwich') {
       setSandwichClass('crossed');
+      setDropdownVisible(true);
     } else {
       setSandwichClass('sandwich');
+      setDropdownVisible(false);
     }
   }
 
@@ -36,10 +51,19 @@ function Navigation({ isLoaded }) {
           <div className='bar1'></div>
           <div className='bar3'></div>
         </div>
+        <div className='App'>
+          <header className='App-header'>
+            <div className='menu' onClick={() => myFunction()}>
+              {/* <DropdownMenu /> */}
+              {isDropdownVisible && <DropdownMenu />}
+            </div>
+          </header>
+        </div>
         {/* <NavLink exact to='/' className='navbar_home'>
           Home
         </NavLink> */}
       </div>
+
       <div>{isLoaded && sessionLinks}</div>
     </div>
   );

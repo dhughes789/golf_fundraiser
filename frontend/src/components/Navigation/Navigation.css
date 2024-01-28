@@ -30,7 +30,7 @@ session user, you can drop down to see login/signup or user/logout */
   height: 5px;
   background-color: #333;
   margin: 6px 0;
-  transition: 0.9s;
+  transition: 0.3s;
 }
 
 .crossed .bar1 {
@@ -43,4 +43,36 @@ session user, you can drop down to see login/signup or user/logout */
 
 .crossed .bar3 {
   transform: translate(0, -11px) rotate(45deg);
+}
+
+header {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+ul {
+  list-style: none;
+  padding: unset;
+  margin: unset;
+}
+
+li {
+  padding: 14px;
+  transition: 0.3s;
+}
+
+li:hover {
+  background: black;
+  cursor: pointer;
+  color: #fff;
+}
+
+.dropdown-menu {
+  background:white;
+  box-shadow: 0px 10px 30px 0px rgba(82, 63, 105, 0.05);
+  transition: all linear 0.3s;
+  opacity: 20%;
 }
