@@ -13,6 +13,7 @@ function Footer({ user }) {
     "Helias Catholic",
     "Central Bank",
     "Capital Holdings",
+    "Test",
   ];
 
   const renderSponsorList = (sponsors) => {
