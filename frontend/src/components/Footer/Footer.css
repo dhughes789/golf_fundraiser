@@ -1,23 +1,19 @@
 .footer_container {
-  background-color: #829298;
+  background: transparent;
+  backdrop-filter: blur(8px);
+  border-top: 4px solid #02223c;
+  border-bottom: 4px solid #02223c;
   margin-top: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 50px;
+  height: 35px;
 }
 
 .footer_sponsor {
-  width: 45%;
+  width: 95%;
   display: flex;
-  margin-left: 6rem;
-}
-
-.footer_sponsor__title {
-  font-family: "Montserrat Alternates", sans-serif;
-  color: #02223c;
-  font-size: 25px;
-  margin-right: 10px;
+  margin-left: 0.3rem;
 }
 
 .footer_sponsor__ticker {
@@ -30,9 +26,9 @@
 .footer_sponsor__sponsors {
   position: relative;
   white-space: nowrap;
-  animation: move-words 25s linear infinite;
+  animation: move-words 60s linear infinite;
   margin: 0;
-  font-size: 25px;
+  font-size: 20px;
 }
 
 @keyframes move-words {
@@ -47,7 +43,9 @@
 .footer_credit {
   display: flex;
   justify-content: space-between;
-  width: 110px;
+  width: 5%;
+  margin-right: 0.3rem;
+  margin-left: 0.3rem;
 }
 
 .footer_credit__github {
@@ -55,14 +53,15 @@
 }
 
 .footer_credit__github img {
-  width: 35px;
+  width: 30px;
   height: auto;
   align-self: center;
 }
 
 .footer_credit__char {
   margin-top: 3px;
-  font-size: 33px;
+  font-size: 30px;
   font-weight: bold;
   font-family: "Fanwood Text", serif;
+  color: #02223c;
 }
