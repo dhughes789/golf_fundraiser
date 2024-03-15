@@ -1,19 +1,24 @@
-import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
-import { useSelector } from 'react-redux';
-import ProfileButton from './ProfileButton';
-import './Navigation.css';
+import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
+import { useSelector } from "react-redux";
+import ProfileButton from "./ProfileButton";
+import "./Navigation.css";
 
 function Navigation({ isLoaded }) {
   const sessionUser = useSelector((state) => state.session.user);
-  const [sandwichClass, setSandwichClass] = useState('sandwich');
+  const [sandwichClass, setSandwichClass] = useState("sandwich");
   const [isDropdownVisible, setDropdownVisible] = useState(false);
 
   const DropdownMenu = () => {
     return (
-      <div className='dropdown-menu'>
+      <div className="dropdown-menu">
         <ul>
           <li>Home</li>
+          <li>Login</li>
+          <li>Signup</li>
+          <li>Quintin</li>
+          <li>Danton</li>
+          <li>Rental Home</li>
           <li>Login</li>
           <li>Signup</li>
         </ul>
@@ -22,11 +27,11 @@ function Navigation({ isLoaded }) {
   };
 
   function myFunction() {
-    if (sandwichClass == 'sandwich') {
-      setSandwichClass('crossed');
+    if (sandwichClass == "sandwich") {
+      setSandwichClass("crossed");
       setDropdownVisible(true);
     } else {
-      setSandwichClass('sandwich');
+      setSandwichClass("sandwich");
       setDropdownVisible(false);
     }
   }
@@ -37,24 +42,23 @@ function Navigation({ isLoaded }) {
   } else {
     //will be drop down
     sessionLinks = (
-      <div className='navbar_session'>
-        <NavLink to='/login'>Log In</NavLink>
-        <NavLink to='/signup'>Sign Up</NavLink>
+      <div className="navbar_session">
+        <NavLink to="/login">Log In</NavLink>
+        <NavLink to="/signup">Sign Up</NavLink>
       </div>
     );
   }
 
   return (
-    <div className='navbar_container'>
+    <div className="navbar_container">
       <div>
         <div className={sandwichClass} onClick={() => myFunction()}>
-          <div className='bar1'></div>
-          <div className='bar3'></div>
+          <div className="bar1"></div>
+          <div className="bar3"></div>
         </div>
-        <div className='App'>
-          <header className='App-header'>
-            <div className='menu' onClick={() => myFunction()}>
-              {/* <DropdownMenu /> */}
+        <div className="App">
+          <header className="App-header">
+            <div className="menu" onClick={() => myFunction()}>
               {isDropdownVisible && <DropdownMenu />}
             </div>
           </header>
