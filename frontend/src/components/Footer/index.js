@@ -1,7 +1,11 @@
 import React from "react";
 import "./Footer.css";
+import { useDispatch, useSelector } from "react-redux";
 
 function Footer({ user }) {
+  const dispatch = useDispatch();
+  const sponsors = useSelector(state => state.session.sponors)
+
   const sponsorList = [
     "Thank you to all our sponsors!",
     "Front Row Films",
