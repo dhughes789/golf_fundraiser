@@ -35,7 +35,10 @@ function Navigation({ isLoaded }) {
     } else {
       setSandwichClass('sandwich');
       setDropDownClass('dropdown-menu-close');
-      // setDropdownVisible(false);
+
+      setTimeout(() => {
+        setDropdownVisible(false);
+      }, 250);
     }
   }
 

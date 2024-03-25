@@ -45,6 +45,10 @@ session user, you can drop down to see login/signup or user/logout */
   transform: translate(0, -11px) rotate(45deg);
 }
 
+.crossed {
+  padding-bottom: 4px;
+}
+
 header {
   width: 100%;
   position: relative;
@@ -121,7 +125,7 @@ li:hover {
   }
 }
 
-@keyframes fadeIn{
+/* @keyframes fadeIn{
   0% {
       background: rgba(225, 225, 225, 0.1);
     }
@@ -129,6 +133,6 @@ li:hover {
     36% {
       background: rgba(225, 225, 225, 0.5);
     }
-}
+} */
 
 
