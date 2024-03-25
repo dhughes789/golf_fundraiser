@@ -12,17 +12,19 @@ function Navigation({ isLoaded }) {
 
   const DropdownMenu = () => {
     return (
-      <div className={dropDownClass}>
-        <ul>
-          <li>Home</li>
-          <li>Login</li>
-          <li>Signup</li>
-          <li>Quintin</li>
-          <li>Danton</li>
-          <li>Rental Home</li>
-          <li>Login</li>
-          <li>Signup</li>
-        </ul>
+      <div className='menu-container'>
+        <div className={dropDownClass}>
+          <ul>
+            <li>Home</li>
+            <li>Login</li>
+            <li>Signup</li>
+            <li>Quintin</li>
+            <li>Danton</li>
+            <li>Rental Home</li>
+            <li>Login</li>
+            <li>Signup</li>
+          </ul>
+        </div>
       </div>
     );
   };
