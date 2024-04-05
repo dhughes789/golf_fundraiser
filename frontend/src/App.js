@@ -20,7 +20,7 @@ function App() {
     <div className="app_container">
       <img src={"/golfPic.jpg"} className="app__background_image" />
       <img
-        src={"/app_background_accent.svg"}
+        src={"/app_background_accent.png"}
         className="app__background_accent"
       />
       <Navigation isLoaded={isLoaded} />
