@@ -2,7 +2,7 @@
   border: 1px solid red;
   display: flex;
   justify-content: space-between;
-  padding:10px 5px 5px 5px;
+  padding: 10px 5px 5px 5px;
 }
 
 .navbar_home {
@@ -45,6 +45,10 @@ session user, you can drop down to see login/signup or user/logout */
   transform: translate(0, -11px) rotate(45deg);
 }
 
+.crossed {
+  padding-bottom: 4px;
+}
+
 header {
   width: 100%;
   position: relative;
@@ -70,11 +74,69 @@ li:hover {
   color: #fff;
 }
 
-.dropdown-menu {
-  background:white;
-  box-shadow: 0px 10px 30px 0px rgba(82, 63, 105, 0.05);
-  transition: all linear 0.3s;
-  opacity: 20%;
+.menu-container {
+  position: relative;
 }
+.dropdown-menu-open {
+position: absolute;
+  top: 0;
+  left: -20px;
+  width: 200px;
+  height: 90vh;
+  background: rgba(225, 225, 225, 0.5);
+  box-shadow: 0px 10px 30px 0px rgba(82, 63, 105, 0.05);
+
+  animation: move-menu-open 0.25s linear 0s;
+}
+
+.dropdown-menu-close {
+position: absolute;
+  top: 0;
+  left: -20px;
+  width: 200px;
+  height: 90vh;
+  background: rgba(225, 225, 225, 0.5);
+  box-shadow: 0px 10px 30px 0px rgba(82, 63, 105, 0.05);
+  
+  animation: move-menu-close 0.25s linear 0s;
+
+}
+
+@keyframes move-menu-open {
+  from {
+    /* opacity: 20%; */
+    transform: translateX(-100%);
+    
+  }
+
+  to {
+    transform: translateX(0%);
+  
+  }
+}
+
+@keyframes move-menu-close {
+  from {
+    /* opacity: 20%; */
+    transform: translateX(0%);
+
+  }
+
+  to {
+    transform: translateX(-100%);
+    display: none;
+
+  }
+}
+
+/* @keyframes fadeIn{
+  0% {
+      background: rgba(225, 225, 225, 0.1);
+    }
+  
+    36% {
+      background: rgba(225, 225, 225, 0.5);
+    }
+} */
 
 
