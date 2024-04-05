@@ -1,41 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Footer.css";
 import { useDispatch, useSelector } from "react-redux";
+import { fetchSponsors } from "../../store/sponsor";
 
 function Footer({ user }) {
   const dispatch = useDispatch();
-  const sponsors = useSelector(state => state.session.sponors)
+  const sponsors = useSelector((state) => state.sponsors.data);
 
-  const sponsorList = [
-    "Thank you to all our sponsors!",
-    "Front Row Films",
-    "Play It Again Sports",
-    "Ghetto Gerbes",
-    "Applebees",
-    "Jamaican Jerk Hut",
-    "Helias Catholic",
-    "Central Bank",
-    "Capital Holdings",
-    "Test",
-    "Front Row Films",
-    "Play It Again Sports",
-    "Ghetto Gerbes",
-    "Applebees",
-    "Jamaican Jerk Hut",
-    "Helias Catholic",
-    "Central Bank",
-    "Capital Holdings",
-    "Test",
-    "Front Row Films",
-    "Play It Again Sports",
-    "Ghetto Gerbes",
-    "Applebees",
-    "Jamaican Jerk Hut",
-    "Helias Catholic",
-    "Central Bank",
-    "Capital Holdings",
-    "Test",
-  ];
+  useEffect(() => {
+    dispatch(fetchSponsors());
+  }, [dispatch]);
+
+  const sponsorList = sponsors.map((sponsor) => sponsor.name);
+  console.log(sponsorList);
 
   const renderSponsorList = (sponsors) => {
     return sponsors.join(" • ");

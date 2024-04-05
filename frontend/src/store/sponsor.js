@@ -1,19 +1,31 @@
-import {fetch} from "./csrf";;
+import { fetch } from "./csrf";
 
-const GET_SPONSORS = 'sponsors/getSponsors';
+const GET_SPONSORS = "sponsors/getSponsors";
 
-const getSponsors = () => {
-    return {
-        type: GET_SPONSORS,
-    };
+const getSponsors = (sponsors) => {
+  return {
+    type: GET_SPONSORS,
+    payload: sponsors,
+  };
 };
 
 export const fetchSponsors = () => async (dispatch) => {
-    const response = await fetch('/api/sponsors', {
-        method: "GET",
-    });
-    dispatch(getSponsors())
-    console.log("response", response)
-    return response
-}
+  const sponsors = await fetch("/api/sponsor");
+  return dispatch(getSponsors(sponsors));
+};
 
+const initialState = {};
+
+const sponsorReducer = (state = initialState, action) => {
+  let newState;
+
+  switch (action.type) {
+    case GET_SPONSORS:
+      newState = Object.assign({}, state, { ...action.payload });
+      return newState;
+    default:
+      return state;
+  }
+};
+
+export default sponsorReducer;

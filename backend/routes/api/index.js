@@ -1,9 +1,14 @@
-const router = require('express').Router();
-const asyncHandler = require('express-async-handler');
-const { User } = require('../../db/models');
-const { restoreUser, requireAuth, setTokenCookie } = require('../../utils/auth.js');
-const sessionRouter = require('./session.js');
-const usersRouter = require('./users.js');
+const router = require("express").Router();
+const asyncHandler = require("express-async-handler");
+const { User } = require("../../db/models");
+const {
+  restoreUser,
+  requireAuth,
+  setTokenCookie,
+} = require("../../utils/auth.js");
+const sessionRouter = require("./session.js");
+const usersRouter = require("./users.js");
+const sponsorRouter = require("./sponsor.js");
 
 // // GET /api/set-token-cookie
 // router.get('/set-token-cookie', asyncHandler(async (req, res) => {
@@ -34,8 +39,10 @@ const usersRouter = require('./users.js');
 //   }
 // );
 
-router.use('/session', sessionRouter);
+router.use("/session", sessionRouter);
 
-router.use('/users', usersRouter);
+router.use("/users", usersRouter);
+
+router.use("/sponsor", sponsorRouter);
 
 module.exports = router;
