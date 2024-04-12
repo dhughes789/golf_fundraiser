@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import "./Footer.css";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchSponsors } from "../../store/sponsor";
+import { fetchTeams } from "../../store/team";
 
 function Footer({ user }) {
   const dispatch = useDispatch();
@@ -9,10 +10,11 @@ function Footer({ user }) {
 
   useEffect(() => {
     dispatch(fetchSponsors());
+    dispatch(fetchTeams());
   }, [dispatch]);
 
-  const sponsorList = sponsors.map((sponsor) => sponsor.name);
-  console.log(sponsorList);
+  // const sponsorList = sponsors.map((sponsor) => sponsor.name);
+  // console.log(sponsorList);
 
   const renderSponsorList = (sponsors) => {
     return sponsors.join(" • ");
@@ -23,7 +25,7 @@ function Footer({ user }) {
       <div className="footer_sponsor">
         <div className="footer_sponsor__ticker">
           <div class="footer_sponsor__sponsors">
-            {renderSponsorList(sponsorList)}
+            {/* {renderSponsorList(sponsorList)} */}
           </div>
         </div>
       </div>

@@ -9,6 +9,7 @@ const {
 const sessionRouter = require("./session.js");
 const usersRouter = require("./users.js");
 const sponsorRouter = require("./sponsor.js");
+const teamRouter = require("./team.js");
 
 // // GET /api/set-token-cookie
 // router.get('/set-token-cookie', asyncHandler(async (req, res) => {
@@ -44,5 +45,7 @@ router.use("/session", sessionRouter);
 router.use("/users", usersRouter);
 
 router.use("/sponsor", sponsorRouter);
+
+router.use("/team", teamRouter);
 
 module.exports = router;
